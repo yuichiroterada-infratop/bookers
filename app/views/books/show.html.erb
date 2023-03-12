@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "books" %>
+<p>
+  <strong>Title: </strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Body: </strong>
+  <%= @book.body %>
+</p>
+
+<div class="links">
+  <p class="link_edit"><%= link_to "edit", edit_book_path(@book.id) %></p>
+  <p class="link_devide">|</p>
+  <p class="link_back"><%= link_to "back", books_path(@book.id) %></p>
+</div>
