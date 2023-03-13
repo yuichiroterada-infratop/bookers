@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag "homes" %>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました %>
+  error!:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>

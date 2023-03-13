@@ -1,5 +1,5 @@
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました %>
+  error!:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -18,7 +18,7 @@
 <% end %>
 
 <div class="links">
-  <p class="link_edit"><%= link_to "edit", edit_book_path(@book.id) %></p>
+  <p class="link_edit"><%= link_to "Show", book_path(@book.id) %></p>
   <p class="link_devide">|</p>
-  <p class="link_back"><%= link_to "back", books_path(@book.id) %></p>
+  <p class="link_back"><%= link_to "back", "/books" %></p>
 </div>
